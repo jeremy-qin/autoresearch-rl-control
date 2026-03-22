@@ -1,7 +1,7 @@
 inference_gpu_ids = [0]
 trainer_gpu_ids = [1]
 
-max_steps = 20
+max_steps = 6
 seq_len = 2048
 output_dir = "./output"
 
@@ -10,7 +10,7 @@ offline = true
 project = "autoresearch-rl"
 
 [model]
-name = "Qwen/Qwen2.5-0.5B-Instruct"
+name = "./sft_output/weights/step_200"
 
 [orchestrator]
 batch_size = 256
@@ -22,7 +22,7 @@ temperature = 1.0
 
 [orchestrator.eval]
 num_examples = 200
-interval = 10
+interval = 6
 eval_base_model = false
 
 [orchestrator.eval.sampling]

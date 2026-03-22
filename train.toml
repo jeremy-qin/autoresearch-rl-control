@@ -43,7 +43,7 @@ name = "gsm8k"
 
 [trainer.optim]
 type = "adamw"
-lr = 3e-6
+lr = 5e-6
 weight_decay = 0.01
 
 [trainer.scheduler]
